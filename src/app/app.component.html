@@ -1,3 +1,10 @@
-<md-input-container>
-  <input mdInput placeholder="Favorite food" [value]="title">
-</md-input-container>
+<div class="container">
+    <h1 class="header">{{title}}</h1>
+    <ul class="nav nav-pills">
+        <li role="presentation"><a [routerLink]="links.home">Home</a></li>
+        <li role="presentation"><a [routerLink]="links.items">Items</a></li>
+        <li role="presentation"><a [routerLink]="links.widgets">Widgets</a></li>
+        <li role="presentation"><a [routerLink]="links.users">Users</a></li>
+    </ul>    
+</div>
+<router-outlet></router-outlet>

@@ -2,27 +2,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MdButtonModule, MdCheckboxModule} from '@angular/material';
-import { MaterialModule } from "@angular/material";
-import 'hammerjs';
-
+import { routing } from './app.routing';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
+import { ItemsComponent } from './components/items/items.component';
+import { UsersComponent } from './components/users/users.component';
+import { WidgetsComponent } from './components/widgets/widgets.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    ItemsComponent,
+    UsersComponent,
+    WidgetsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    BrowserAnimationsModule,
-    MaterialModule,
-    MdButtonModule,
-    MdCheckboxModule
+    routing
   ],
-  exports: [MdButtonModule, MdCheckboxModule],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })
