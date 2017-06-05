@@ -1,5 +1,15 @@
 <div class="container">
-  <p>
-    users works!
-  </p>
+  <div class="col-sm-6">
+    <user-list [users]="users$ | async"
+               (selected)="selectUser($event)"
+               (deleted)="deleteUser($event)">
+    </user-list>
+  </div>
+  <div class="col-sm-6">
+    <user-detail (saved)="saveUser($event)"
+                 (cancelled)="resetUser($event)"
+                 [user]="selectedUser">
+      Select a user
+    </user-detail>
+  </div>
 </div>

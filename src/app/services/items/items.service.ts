@@ -37,7 +37,6 @@ export class ItemsService {
     }
 
     createItem(item: Item){
-      console.log(item);
       return this.http.post(`${BASE_URL}`,JSON.stringify(item),HEADER)
         .map(res => res.json())
         .map(payload => ({type: CREATE_ITEM, payload}))
@@ -45,7 +44,6 @@ export class ItemsService {
     }
 
     updateItem(item: Item){
-      console.log(item);
       return this.http.put(`${BASE_URL}${item.id}`,JSON.stringify(item),HEADER)
         .subscribe(action => this.store.dispatch({type: UPDATE_ITEM, payload: item}));
     }

@@ -1,3 +1,21 @@
-<p>
-  user-list works!
-</p>
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h4>User list</h4>
+  </div>
+  <div class="panel-body">
+
+    <ul class="list-group" *ngFor="let user of users">
+      <li class="list-group-item" (click)="selected.emit(user)">
+        <h5>{{user.name}}</h5>
+        <h5>{{user.bio}}</h5>
+        <div class="user-delete-button">
+            <button type="button" (click)="deleted.emit(user); $event.stopPropagation();" 
+            class="btn btn-default pull-right"><i class="glyphicon glyphicon-remove">
+              </i>
+            </button> 
+        </div>
+      </li>
+    </ul>
+    
+  </div>
+</div>

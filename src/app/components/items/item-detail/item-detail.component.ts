@@ -27,6 +27,6 @@ export class ItemDetailComponent implements OnInit {
   constructor(private usersService: UsersService){}
 
   ngOnInit() {
-      this.usersService.loadUser();
+      this.usersService.loadUsers();
   }
 }

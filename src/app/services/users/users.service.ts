@@ -25,11 +25,31 @@ export class UsersService {
     private http: Http
   ) { }
 
-  loadUser(){
+  loadUsers(){
     return this.http.get(BASE_URL)
       .map(res => res.json())
       .map(payload => ({type : ADD_USERS, payload}))
       .subscribe(action => this.store.dispatch(action));
   }
 
+   saveUser(user: User) {
+    return (user.id) ? this.updateUser(user) : this.createUser(user);
+  }
+
+  createUser(user: User) {
+    return this.http.post(`${BASE_URL}`, JSON.stringify(user), HEADER)
+      .map(res => res.json())
+      .map(payload => ({ type: CREATE_USER, payload }))
+      .subscribe(action => this.store.dispatch(action));
+  }
+
+  updateUser(user: User) {
+    return this.http.put(`${BASE_URL}${user.id}`, JSON.stringify(user), HEADER)
+      .subscribe(action => this.store.dispatch({ type: UPDATE_USER, payload: user }));
+  }
+
+  deleteUser(user: User) {
+    return this.http.delete(`${BASE_URL}${user.id}`)
+      .subscribe(action => this.store.dispatch({ type: DELETE_USER, payload: user }));
+  }
 }

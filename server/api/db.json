@@ -28,7 +28,7 @@
   "users": [
     {
       "id": 1,
-      "name": "John Doe",
+      "name": "John BIsta",
       "bio": "Not to be confused with John Smith and stuff"
     },
     {
@@ -40,6 +40,11 @@
       "id": 3,
       "name": "Sally Sue",
       "bio": "Her first and last name both start with S haha!"
+    },
+    {
+      "name": "Kripesh",
+      "bio": "Kripesh Bista is a 24 yrs old  man",
+      "id": 4
     }
   ],
   "widgets": [
