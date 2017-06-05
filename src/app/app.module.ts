@@ -22,6 +22,8 @@ import { users } from './reducer/users.reducer';
 import { widgets } from './reducer/widgets.reducer';
 import { ItemDetailComponent } from './components/items/item-detail/item-detail.component';
 import { ItemListComponent } from './components/items/item-list/item-list.component';
+import { UserListComponent } from './components/users/user-list/user-list.component';
+import { UserDetailComponent } from './components/users/user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { ItemListComponent } from './components/items/item-list/item-list.compon
     UsersComponent,
     WidgetsComponent,
     ItemDetailComponent,
-    ItemListComponent
+    ItemListComponent,
+    UserListComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,
