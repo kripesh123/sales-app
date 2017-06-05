@@ -1,6 +1,6 @@
 <div class="container">
   <div class="col-sm-6">
-    <item-list [items]="item$ | async"
+    <item-list [items]="items$ | async"
                (selected)="selectItem($event)"
                (deleted)="deleteItem($event)">
     </item-list>

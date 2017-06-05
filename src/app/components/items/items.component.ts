@@ -11,7 +11,7 @@ import {ItemsService} from '../../services/items/items.service';
 })
 export class ItemsComponent implements OnInit {
 
-  item$ : Observable<Item[]>;
+  items$ : Observable<Item[]>;
   selectedItem: Item;
 
   constructor(
@@ -19,7 +19,7 @@ export class ItemsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.item$ = this.itemsService.items$;
+    this.items$ = this.itemsService.items$;
     this.itemsService.loadItems();
   }
 
