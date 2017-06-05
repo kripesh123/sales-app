@@ -20,6 +20,8 @@ import {WidgetsService} from './services/widgets/widgets.service';
 import { items } from './reducer/items.reducer';
 import { users } from './reducer/users.reducer';
 import { widgets } from './reducer/widgets.reducer';
+import { ItemDetailComponent } from './components/items/item-detail/item-detail.component';
+import { ItemListComponent } from './components/items/item-list/item-list.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { widgets } from './reducer/widgets.reducer';
     HomeComponent,
     ItemsComponent,
     UsersComponent,
-    WidgetsComponent
+    WidgetsComponent,
+    ItemDetailComponent,
+    ItemListComponent
   ],
   imports: [
     BrowserModule,
