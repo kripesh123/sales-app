@@ -1,3 +1,21 @@
-<p>
-  item-list works!
-</p>
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h4>Item list</h4>
+  </div>
+  <div class="panel-body">
+
+    <ul class="list-group" *ngFor="let item of items">
+      <li class="list-group-item" (click)="selected.emit(item)">
+        <h5>{{item.name}}</h5>
+        <h5>{{item.description}}</h5>
+        <div class="item-delete-button">
+            <button type="button" (click)="deleted.emit(item); $event.stopPropagation();" 
+            class="btn btn-default pull-right"><i class="glyphicon glyphicon-remove">
+              </i>
+            </button> 
+        </div>
+      </li>
+    </ul>
+    
+  </div>
+</div>

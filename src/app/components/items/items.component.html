@@ -1,5 +1,15 @@
 <div class="container">
-  <p>
-    items works!
-  </p>
+  <div class="col-sm-6">
+    <item-list [items]="item$ | async"
+               (selected)="selectItem($event)"
+               (deleted)="deleteItem($event)">
+    </item-list>
+  </div>
+  <div class="col-sm-6">
+    <item-detail (saved)="saveItem($event)"
+                 (cancelled)="resetItem($event)"
+                 [item]="selectedItem">
+      Select an Item
+    </item-detail>
+  </div>
 </div>
