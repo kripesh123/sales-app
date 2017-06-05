@@ -1,15 +1,14 @@
 import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
-import {Item} from '../../../models/item.model';
+import {Widget} from '../../../models/widget.model';
 
 @Component({
-  selector: 'item-list',
-  templateUrl: './item-list.component.html',
-  styleUrls: ['./item-list.component.css'],
+  selector: 'widget-list',
+  templateUrl: './widget-list.component.html',
+  styleUrls: ['./widget-list.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ItemListComponent {
-
-  @Input() items: Item[];
+export class WidgetListComponent {
+  @Input() widgets: Widget[];
   @Output() selected = new EventEmitter();
   @Output() deleted = new EventEmitter();
  

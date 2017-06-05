@@ -15,16 +15,16 @@ export class ItemsComponent implements OnInit {
   selectedItem: Item;
 
   constructor(
-    private itemsService : ItemsService
+   private itemsService:ItemsService
   ) { }
 
-  ngOnInit() {
+   ngOnInit() {
     this.items$ = this.itemsService.items$;
     this.itemsService.loadItems();
   }
 
-  resetItem(){
-    let emptyItem: Item = { id: null, name: '', description: '', user: undefined };
+  resetItem() {
+    let emptyItem: Item = {id: null, name: '', description: '', user: undefined};
     this.selectedItem = emptyItem;
   }
 
@@ -32,15 +32,14 @@ export class ItemsComponent implements OnInit {
     this.selectedItem = item;
   }
 
-  saveItem(item: Item){
+  saveItem(item: Item) {
     this.itemsService.saveItem(item);
-
     this.resetItem();
   }
 
-  deleteItem(item: Item){
+  deleteItem(item: Item) {
     this.itemsService.deleteItem(item);
-
     this.resetItem();
   }
+
 }

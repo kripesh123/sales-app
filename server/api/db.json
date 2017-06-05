@@ -1,70 +1,41 @@
 {
   "items": [
     {
-      "id": 1,
-      "name": "Item One",
-      "description": "This is description One",
-      "user": 3
-    },
-    {
-      "id": 2,
-      "name": "Item 2",
-      "description": "This is a description edited",
-      "user": 3
-    },
-    {
-      "id": 3,
-      "name": "Item 3",
-      "description": "This is a lovely item edited again!",
-      "user": 2
-    },
-    {
-      "id": 4,
-      "name": "Item 4",
-      "description": "Another lovely item!",
-      "user": 1
+      "name": "umesh item",
+      "description": "umesh kripesh",
+      "user": "1",
+      "id": 2
     }
   ],
   "users": [
     {
-      "id": 1,
-      "name": "John BIsta",
-      "bio": "Not to be confused with John Smith and stuff"
+      "name": "Kripesh  busta",
+      "bio": "Kripesh Bista",
+      "id": 1
     },
     {
       "id": 2,
-      "name": "Jane Doe",
-      "bio": "Don't call her plain Jane whatever you do"
+      "name": "Binod",
+      "bio": "binod Kc"
     },
     {
-      "id": 3,
-      "name": "Sally Sue",
-      "bio": "Her first and last name both start with S haha!"
-    },
-    {
-      "name": "Kripesh",
-      "bio": "Kripesh Bista is a 24 yrs old  man",
-      "id": 4
+      "name": "umesh",
+      "bio": "umesh",
+      "id": 3
     }
   ],
   "widgets": [
     {
-      "id": 1,
-      "name": "Widget 1",
-      "description": "This is a description",
-      "user": 1
+      "name": "Kripesh Widget Name",
+      "description": "Kripesh Widget Description",
+      "user": "1",
+      "id": 1
     },
     {
       "id": 2,
-      "name": "Widget 2",
-      "description": "This is a description",
-      "user": 3
-    },
-    {
-      "id": 3,
-      "name": "Widget 3",
-      "description": "This is a lovely widget edited again!",
-      "user": 2
+      "name": "Binod Widget",
+      "description": "Binod Widget",
+      "user": "2"
     }
   ]
 }

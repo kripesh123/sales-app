@@ -19,7 +19,7 @@ export class UsersComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.users$ = this.usersService.user$;
+    this.users$ = this.usersService.users$;
     this.usersService.loadUsers();
   }
 

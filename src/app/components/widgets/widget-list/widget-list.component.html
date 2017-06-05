@@ -1,0 +1,21 @@
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h4>Widget list</h4>
+  </div>
+  <div class="panel-body">
+
+    <ul class="list-group" *ngFor="let widget of widgets">
+      <li class="list-group-item" (click)="selected.emit(widget)">
+        <h5>{{widget.name}}</h5>
+        <h5>{{widget.description}}</h5>
+        <div class="widget-delete-button">
+            <button type="button" (click)="deleted.emit(widget); $event.stopPropagation();" 
+            class="btn btn-default pull-right"><i class="glyphicon glyphicon-remove">
+              </i>
+            </button> 
+        </div>
+      </li>
+    </ul>
+    
+  </div>
+</div>

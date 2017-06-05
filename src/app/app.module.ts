@@ -24,6 +24,8 @@ import { ItemDetailComponent } from './components/items/item-detail/item-detail.
 import { ItemListComponent } from './components/items/item-list/item-list.component';
 import { UserListComponent } from './components/users/user-list/user-list.component';
 import { UserDetailComponent } from './components/users/user-detail/user-detail.component';
+import { WidgetDetailComponent } from './components/widgets/widget-detail/widget-detail.component';
+import { WidgetListComponent } from './components/widgets/widget-list/widget-list.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { UserDetailComponent } from './components/users/user-detail/user-detail.
     ItemDetailComponent,
     ItemListComponent,
     UserListComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    WidgetDetailComponent,
+    WidgetListComponent
   ],
   imports: [
     BrowserModule,

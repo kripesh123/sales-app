@@ -18,7 +18,7 @@ const HEADER = { headers: new Headers({ 'Content-Type': 'application/json' }) };
 @Injectable()
 export class UsersService {
 
-  user$ : Observable<User[]> = this.store.select('users');
+  users$ : Observable<User[]> = this.store.select('users');
 
   constructor(
     private store: Store<AppStore>,

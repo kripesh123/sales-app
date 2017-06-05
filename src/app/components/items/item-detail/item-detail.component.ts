@@ -14,19 +14,19 @@ export class ItemDetailComponent implements OnInit {
 
   originalName: string;
   selectedItem: Item;
-  users$: Observable<User[]> = this.usersService.user$;
+  users$: Observable<User[]> = this.usersService.users$;
 
   @Output() saved = new EventEmitter();
   @Output() cancelled = new EventEmitter();
 
   @Input() set item(value: Item){
-    if(value){ this.originalName = value.name;}
+    if (value) { this.originalName = value.name; }
     this.selectedItem = Object.assign({}, value);
   }
 
-  constructor(private usersService: UsersService){}
+  constructor(private usersService : UsersService){}
 
   ngOnInit() {
-      this.usersService.loadUsers();
+    this.usersService.loadUsers();
   }
 }

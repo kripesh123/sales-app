@@ -1,5 +1,15 @@
 <div class="container">
-  <p>
-    widgets works!
-  </p>
+  <div class="col-sm-6">
+    <widget-list [widgets]="widgets$ | async"
+               (selected)="selectWidget($event)"
+               (deleted)="deleteWidget($event)">
+    </widget-list>
+  </div>
+  <div class="col-sm-6">
+    <widget-detail (saved)="saveWidget($event)"
+                 (cancelled)="resetWidget($event)"
+                 [widget]="selectedWidget">
+      Select a Widget
+    </widget-detail>
+  </div>
 </div>
