@@ -32,6 +32,12 @@ export class ItemsComponent implements OnInit {
     this.selectedItem = item;
   }
 
+  saveItem(item: Item){
+    this.itemsService.saveItem(item);
+
+    this.resetItem();
+  }
+
   deleteItem(item: Item){
     this.itemsService.deleteItem(item);
 

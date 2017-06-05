@@ -3,6 +3,36 @@
     <h4>New Item </h4>
   </div>
   <div class="panel-body">
-    This is panel body
+    <h5 *ngIf="selectedItem.id">Editing {{originalName}}</h5>
+    <h5 *ngIf="!selectedItem.id">Create New Item</h5>
+
+    <div class="col-sm-12">
+      <form novalidate>
+
+        <div class="form-group">
+          <label>Item Name</label>
+          <input type="text" [(ngModel)]="selectedItem.name" class="form-control" name="name" placeholder="Enter a name">
+        </div>
+
+        <div class="form-group">
+          <label>Item Description</label>
+          <input type="text" [(ngModel)]="selectedItem.description" class="form-control" name="description" placeholder="Enter a description">
+        </div>
+
+        <div class="form-group">
+          <label for="user">User</label>
+          <select [(ngModel)]="selectedItem.user" name="user" id="user">
+            <option value="undefined">Select...</option>
+            <option *ngFor="let user of users$ | async" value="{{user.id}}">{{user.name}}</option>
+          </select>
+        </div>
+
+        <button type="submit" (click)="cancelled.emit(selectedItem)" class="btn btn-primary">Cancel</button>
+        <button type="submit" (click)="saved.emit(selectedItem)" class="btn btn-success">Save</button>
+           
+      </form>
+    </div>
+
   </div>
+  
 </div>

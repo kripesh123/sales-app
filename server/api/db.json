@@ -2,8 +2,8 @@
   "items": [
     {
       "id": 1,
-      "name": "Item 1",
-      "description": "This is description 1",
+      "name": "Item One",
+      "description": "This is description One",
       "user": 3
     },
     {
