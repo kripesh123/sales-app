@@ -33,6 +33,8 @@ export class WidgetsComponent implements OnInit {
   }
 
   saveWidget(widget: Widget) {
+    let userId = +widget.user;
+    widget.user = userId;
     this.widgetsService.saveWidget(widget);
     this.resetWidget();
   }

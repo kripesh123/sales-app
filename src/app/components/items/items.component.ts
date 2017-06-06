@@ -33,6 +33,8 @@ export class ItemsComponent implements OnInit {
   }
 
   saveItem(item: Item) {
+    let userId = +item.user;
+    item.user = userId;
     this.itemsService.saveItem(item);
     this.resetItem();
   }

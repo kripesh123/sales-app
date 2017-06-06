@@ -1,6 +1,27 @@
-<div class="container">
-  <p>
-    home works!
-  </p>
+<div class="container jumbotron">
+  <div *ngFor="let userData of data$ | async">
+    <div class="container">
+      <h2>{{userData.name}}</h2>
+    </div>
+
+    <div class="container">
+        <h5>Items</h5>
+        <ul>
+                  <li *ngFor="let item of userData.items">
+                    <strong>{{item.name}}</strong> – {{item.description}}
+                  </li>
+        </ul>
+     </div>
+
+     <div class="container">
+        <h5>Widgets</h5>
+        <ul>
+                  <li *ngFor="let widget of userData.widgets">
+                    <strong>{{widget.name}}</strong> – {{widget.description}}
+                  </li>
+        </ul>
+     </div>
+
+  </div>
 </div>
 

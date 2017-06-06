@@ -1,41 +1,18 @@
 {
   "items": [
     {
-      "name": "umesh item",
-      "description": "umesh kripesh",
-      "user": "1",
-      "id": 2
+      "name": "Laptop",
+      "description": "Dell 52' i9 16GB RAM",
+      "user": 1,
+      "id": 1
     }
   ],
   "users": [
     {
-      "name": "Kripesh  busta",
-      "bio": "Kripesh Bista",
+      "name": "Kripesh",
+      "bio": "He is a software engineer working in fusemachines",
       "id": 1
-    },
-    {
-      "id": 2,
-      "name": "Binod",
-      "bio": "binod Kc"
-    },
-    {
-      "name": "umesh",
-      "bio": "umesh",
-      "id": 3
     }
   ],
-  "widgets": [
-    {
-      "name": "Kripesh Widget Name",
-      "description": "Kripesh Widget Description",
-      "user": "1",
-      "id": 1
-    },
-    {
-      "id": 2,
-      "name": "Binod Widget",
-      "description": "Binod Widget",
-      "user": "2"
-    }
-  ]
+  "widgets": []
 }
